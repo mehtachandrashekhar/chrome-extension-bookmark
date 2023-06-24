@@ -1,8 +1,10 @@
-function saveLead(){
-    console.log("Hello moto !")
-}
+let myLead = [];
+const inputEl = document.getElementById("input-el");
+const inputBtn = document.getElementById("input-btn");
 
-let inputBtn = document.getElementById("input-btn");
 inputBtn.addEventListener("click",function() {
-    console.log('Buttom click from add event listener !')
+    myLead.push(inputEl.value)
+
+    console.log(myLead)
+    console.log("Hello moto !")
 })
