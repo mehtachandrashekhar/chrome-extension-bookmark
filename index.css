@@ -12,7 +12,7 @@ body{
 
 }
 
-#input-btn{
+#input-btn, #save-btn{
     background-color:#5f9341;
     color: aliceblue;
     padding: 15px 10px 15px 10px;
@@ -35,7 +35,7 @@ a{
 #delete-btn{
 color: #5f9341;
 background-color: white;
-padding: 15px 10px 15px 10px;
+padding: 14px 10px 14px 10px;
 border:2px solid #5f9341;
 margin-top: 10px;
 }

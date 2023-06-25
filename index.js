@@ -3,9 +3,20 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const delBtn = document.getElementById("delete-btn")
+const saveBtn = document.getElementById("save-btn")
 
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLead"))
 console.log(leadsFromLocalStorage)
+
+
+saveBtn.addEventListener("click",function(){
+    chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
+    // console.log(tabs[0].url)
+    myLead.push(tabs[0].url)
+    localStorage.setItem("myLead",JSON.stringify(myLead))
+    render(myLead)
+    })
+});
 
 if(leadsFromLocalStorage){
     myLead = leadsFromLocalStorage
