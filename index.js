@@ -11,7 +11,6 @@ console.log(leadsFromLocalStorage)
 
 saveBtn.addEventListener("click",function(){
     chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
-    // console.log(tabs[0].url)
     myLead.push(tabs[0].url)
     localStorage.setItem("myLead",JSON.stringify(myLead))
     render(myLead)
